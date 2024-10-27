@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Fit Track</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+     
+    <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+ 
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/animate.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/owl.carousel.min.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/owl.theme.default.min.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/magnific-popup.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/bootstrap-datepicker.css') }}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/jquery.timepicker.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/flaticon.css') }}" />
+	<link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}" />
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  </head>
+  <body>
+
+	<nav class="navbar navbar-expand-lg  " id="ftco-navbar">
+	    <div class="container">
+	    	<a class="navbar-brand" href="index.html">Fit<span>Track<i class="fa fa-leaf"></i></span></a>
+	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="fa fa-bars"></span> Menu
+	      </button>
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav ml-auto">
+	        	<li class="nav-item active"><a href="index.html" class="nav-link">Home</a></li>
+	        	<li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
+	        	<li class="nav-item"><a href="pricing.html" class="nav-link">Pricing</a></li>
+	        	<li class="nav-item"><a href="services.html" class="nav-link">Services</a></li>
+	          <li class="nav-item"><a href="success-stories.html" class="nav-link">Stories</a></li>
+	          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
+	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+			  <li class="nav-item"><a href="predict.html" class="nav-link">Predict</a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+    <!-- END nav -->
+    <section class="hero-wrap hero-wrap-2" style="background-image: url('/static/images/cover-2.jpg');" data-stellar-background-ratio="0.5">
+		<div class="overlay"></div>
+		<div class="container">
+		  <div class="row no-gutters slider-text align-items-end">
+			<div class="col-md-9 ftco-animate pb-5">
+				<p class="breadcrumbs mb-2"><span class="mr-2"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Predict <i class="ion-ios-arrow-forward"></i></span></p>
+			  <h1 class="mb-0 bread">Predict your Nutritional Status</h1>
+			</div>
+		  </div>
+		</div>
+	  </section>
+
+    <section class="ftco-section bg-light">
+    	<div class="container">
+    		<div class="row justify-content-center">
+					<div class="col-md-12">
+						<div class="wrapper">
+							<div class="row no-gutters">
+								<div class="col-lg-8 col-md-5 d-flex align-items-stretch">
+									<div class="contact-wrap w-100 p-md-5 p-4">
+										<h3 class="mb-4">Get in touch</h3>
+										<div id="form-message-warning" class="mb-4"></div> 
+					      		<div id="form-message-success" class="mb-4">
+					            We will provide you a Nutritional Plan.
+					      		</div>
+										<form method="POST" id="contactForm" name="contactForm" class="contactForm">
+											<div class="row">
+												<div class="col-md-8">
+													<div class="form-group">
+														<label class="label" for="name">Full Name</label>
+														<input type="text" class="form-control" name="name" id="name" placeholder="Name">
+													</div>
+												</div>
+												<div class="col-md-4"> 
+													<div class="form-group">
+														<label class="label" for="gender">Gender</label>
+														<select class="form-control" id="gender" name="gender">
+															<option value="" selected hidden>Select</option>
+															<option value='Male'>Male</option>
+															<option value='Female'>Female</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<label class="label" for="age">Age</label>
+														<input type="number" class="form-control" id="age" name="age" min="0" max="100" />								
+													</div>
+												</div>
+												<div class="col-md-6"> 
+													<div class="form-group">
+														<label class="label" for="FCVC">Frequency of consumption of vegetables</label>
+														<input type="text" class="form-control" name="fcvc" id="fcvc">
+													</div>
+												</div>
+												<div class="col-md-6"> 
+													<div class="form-group">
+														<label class="label" for="CH2O">Consumption of water daily</label>
+														<input type="text" class="form-control" name="ch2o" id="ch2o" placeholder="Enter in litres">
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<label class="label" for="CAEC">Consumption of food between meals</label>
+														<select class="form-control" id="caec" name="caec">
+															<option value="" selected hidden>Select</option>
+															<option value='Sometimes'>Sometimes</option>
+															<option value='Frequently'>Frequently</option>
+															<option value='Always'>Always</option>
+															<option value='no'>No</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<label class="label" for="SCC">Calories consumption monitoring</label>
+														<select class="form-control" id="scc" name="scc">
+															<option value="" selected hidden>Select</option>
+															<option value='yes'>Monitoring</option>
+															<option value='no'>Not monitoring</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<label class="label" for="smoking">Smoking status</label>
+														<select class="form-control" id="smoke" name="smoke">
+															<option value="" selected hidden>Select</option>
+															<option value='yes'>Smoker</option>
+															<option value='no'>Non-Smoker</option>
+														</select>
+													</div>
+												</div>
+												
+												<div class="col-md-6">
+													<div class="form-group">
+														<label class="label" for="FAF">Physical activity frequency</label>
+														<input type="text" class="form-control" name="faf" id="faf" cols="30" rows="4" placeholder="Enter a number">
+													</div>
+												</div>
+												<div class="col-md-6">
+													<div class="form-group">
+														<label class="label" for="TUE">Time using technology devices</label>
+														<input type="text" class="form-control" name="tue" id="tue" cols="30" rows="4" placeholder="Enter in hours">
+													</div>
+												</div>
+												<div class="col-md-12">
+													<div class="form-group">
+														<label class="label" for="transport">Transportation Used</label>
+														<select class="form-control" id="mtrans" name="mtrans">
+															<option value="" selected hidden>Select</option>
+															<option value='Public_Transportation'>Public Transportation</option>
+															<option value='Walking'>Walking</option>
+															<option value='Automobile'>Automobile</option>
+															<option value='Motorbike'>Motorbike</option>
+															<option value='Bike'>Bike</option>
+														</select>
+													</div>
+												</div>
+												<div class="col-md-12">
+													<div class="form-group">
+														<input type="submit" value="View Results" class="btn btn-primary">
+														<div class="submitting"></div>
+													</div>
+												</div>
+											</div>
+										</form>
+									</div>
+								</div>
+
+
+
+
+								
+								
+								
+								<div class="col-lg-4 col-md-5 d-flex align-items-stretch">
+									<div class="info-wrap bg-primary w-100 p-md-5 p-4">
+										<h3>Nutritional Status</h3>
+										<p class="mb-4">Let's check your Nutritional level</p>
+								
+										<div class="dbox w-100 d-flex align-items-start">
+											<div class="icon d-flex align-items-center justify-content-center">
+												<span id="check-insufficient" class=""></span>
+											</div>
+											<div class="text pl-3">
+												<p><span>Insufficient Weight</span></p>
+											</div>
+										</div>
+								
+										<div class="dbox w-100 d-flex align-items-center">
+											<div class="icon d-flex align-items-center justify-content-center">
+												<span id="check-normal" class=""></span>
+											</div>
+											<div class="text pl-3">
+												<p><span>Normal Weight</span></p>
+											</div>
+										</div>
+								
+										<div class="dbox w-100 d-flex align-items-center">
+											<div class="icon d-flex align-items-center justify-content-center">
+												<span id="check-overweight" class=""></span>
+											</div>
+											<div class="text pl-3">
+												<p><span>Overweight</span></p>
+											</div>
+										</div>
+								
+										<div class="dbox w-100 d-flex align-items-center">
+											<div class="icon d-flex align-items-center justify-content-center">
+												<span id="check-obesity1" class=""></span>
+											</div>
+											<div class="text pl-3">
+												<p><span>Obesity Type I</span></p>
+											</div>
+										</div>
+								
+										<div class="dbox w-100 d-flex align-items-center">
+											<div class="icon d-flex align-items-center justify-content-center">
+												<span id="check-obesity2" class=""></span>
+											</div>
+											<div class="text pl-3">
+												<p><span>Obesity Type II</span></p>
+											</div>
+										</div>
+								
+										<div class="dbox w-100 d-flex align-items-center">
+											<div class="icon d-flex align-items-center justify-content-center">
+												<span id="check-obesity3" class=""></span>
+											</div>
+											<div class="text pl-3">
+												<p><span>Obesity Type III</span></p>
+											</div>
+										</div>
+									</div>
+								</div>
+								
+								<script>
+									// Assuming result is a variable that holds the category
+									var result = {{ pred }}; // Example value
+								
+									// Function to add a tick to the appropriate category
+									function updateNutritionalStatus(result) {
+										var categories = {
+											[0]: "check-insufficient",
+											[1]: "check-normal",
+											[2]: "check-overweight",
+											[3]: "check-obesity1",
+											[4]: "check-obesity2",
+											[5]: "check-obesity3"
+										};
+
+										// Remove tick from all categories
+										for (var key in categories) {
+											document.getElementById(categories[key]).innerHTML = "";
+										}
+								
+										// Add tick to the selected category
+										if (categories[result]) {
+											document.getElementById(categories[result]).innerHTML = "✅";
+										}
+									}
+								
+									// Call the function with the result
+									updateNutritionalStatus(result);
+								</script>
+
+						  		
+								</div>
+							</div>
+						</div>
+					</div>
+
+					<section class="ftco-section ftco-no-pt ftco-no-pb">
+						<div class="container-fluid px-md-0">
+							<div class="row no-gutters">
+								<div class="col-md-12 d-flex align-items-stretch">
+									<div class="consultation consul w-100 px-4 px-md-5">
+										<div class="text-center">
+											<h3 class="mb-4">
+												<!-- Display the prediction result if available -->
+												{% if pred is not none and name is not none %}
+												<div id="form-message-success" class="mb-4">
+													<strong>{{ name }},</strong> the predicted nutritional level is: <strong>
+														{% if pred == [0] %}
+                                                   			 Insufficient Weight
+														{% elif pred == [1] %}
+															Normal Weight
+														{% elif pred == [2] %}
+															Overweight
+														{% elif pred == [3] %}
+															Obesity Type_I
+														{% elif pred == [4] %}
+															Obesity Type_II
+														{% elif pred == [5] %}
+															Obesity Type_III
+														{% else %}
+															Unknown
+														{% endif %}
+													</strong>
+												</div>
+												{% endif %}
+											</h3>
+										</div>
+												<div class="col-md-12 col-lg-6 col-xl-4">
+													<div class="form-group">
+										  <input type="submit" value="View Plans" class="btn btn-white py-2 px-4">
+										</div>
+												</div>
+											</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</section>
+			
+    			</div>
+				</div>
+    	</div>
+
+
+
+    </section>
+    <section class="ftco-section bg-light">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5 mb-3">
+          <div class="col-md-7 heading-section text-center ">
+          	<span class="subheading mb-3">Price &amp; Plans</span>
+            <h2>Choose Your Perfect Plans</h2>
+          </div>
+        </div>
+    		<div class="row">
+    			<div class="col-md-6 col-lg-3 ">
+	          <div class="block-7">
+	            <div class="text-center">
+	            	<h4 class="heading-2">Starter</h4>
+	            	<span class="excerpt d-block">A Beautiful Healthcare</span>
+		            <span class="price"><sup>$</sup> <span class="number">49</span></span>
+		            
+		            <ul class="pricing-text mb-5">
+		              <li><span class="fa fa-check mr-2"></span>20 Workouts</li>
+		              <li><span class="fa fa-check mr-2"></span>Meal plans in mobile</li>
+		              <li><span class="fa fa-check mr-2"></span>One Coaching</li>
+		              <li><span class="fa fa-check mr-2"></span>-50% Group coaching</li>
+		              <li><span class="fa fa-check mr-2"></span>24/7 Customer support</li>
+		            </ul>
+
+		            <a href="#" class="btn btn-primary px-4 py-3">Get Started</a>
+	            </div>
+	          </div>
+	        </div>
+	        <div class="col-md-6 col-lg-3 ">
+	          <div class="block-7">
+	            <div class="text-center">
+            	<h4 class="heading-2">Standard</h4>
+            	<span class="excerpt d-block">A Beautiful Healthcare</span>
+	            <span class="price"><sup>$</sup> <span class="number">79</span></span>
+	            
+	            <ul class="pricing-text mb-5">
+		              <li><span class="fa fa-check mr-2"></span>20 Workouts</li>
+		              <li><span class="fa fa-check mr-2"></span>Meal plans in mobile</li>
+		              <li><span class="fa fa-check mr-2"></span>One Coaching</li>
+		              <li><span class="fa fa-check mr-2"></span>-50% Group coaching</li>
+		              <li><span class="fa fa-check mr-2"></span>24/7 Customer support</li>
+		            </ul>
+
+	            <a href="#" class="btn btn-primary px-4 py-3">Get Started</a>
+	            </div>
+	          </div>
+	        </div>
+	        <div class="col-md-6 col-lg-3 ">
+	          <div class="block-7">
+	            <div class="text-center">
+            	<h4 class="heading-2">Premium</h4>
+            	<span class="excerpt d-block">A Beautiful Healthcare</span>
+	            <span class="price"><sup>$</sup> <span class="number">109</span></span>
+	            
+	            <ul class="pricing-text mb-5">
+		              <li><span class="fa fa-check mr-2"></span>20 Workouts</li>
+		              <li><span class="fa fa-check mr-2"></span>Meal plans in mobile</li>
+		              <li><span class="fa fa-check mr-2"></span>One Coaching</li>
+		              <li><span class="fa fa-check mr-2"></span>-50% Group coaching</li>
+		              <li><span class="fa fa-check mr-2"></span>24/7 Customer support</li>
+		            </ul>
+
+	            <a href="#" class="btn btn-primary px-4 py-3">Get Started</a>
+	            </div>
+	          </div>
+	        </div>
+	        <div class="col-md-6 col-lg-3 ">
+	          <div class="block-7">
+	            <div class="text-center">
+            	<h4 class="heading-2">Platinum</h4>
+            	<span class="excerpt d-block">A Beautiful Healthcare</span>
+	            <span class="price"><sup>$</sup> <span class="number">159</span></span>
+	            
+	            <ul class="pricing-text mb-5">
+		              <li><span class="fa fa-check mr-2"></span>20 Workouts</li>
+		              <li><span class="fa fa-check mr-2"></span>Meal plans in mobile</li>
+		              <li><span class="fa fa-check mr-2"></span>One Coaching</li>
+		              <li><span class="fa fa-check mr-2"></span>-50% Group coaching</li>
+		              <li><span class="fa fa-check mr-2"></span>24/7 Customer support</li>
+		            </ul>
+
+	            <a href="#" class="btn btn-primary px-4 py-3">Get Started</a>
+	            </div>
+	          </div>
+	        </div>
+	      </div>
+    	</div>
+    </section>
+
+
+
+    <footer class="footer">
+			<div class="container">
+				<div class="row justify-content-center">
+					<div class="col-10 col-lg-6">
+						<div class="subscribe mb-5">
+							<form action="#" class="subscribe-form">
+                <div class="form-group d-flex">
+                  <input type="text" class="form-control rounded-left" placeholder="Enter email address">
+                  <input type="submit" value="Subscribe" class="form-control submit px-3">
+                </div>
+              </form>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-4 col-lg-5">
+						<div class="row">
+							<div class="col-md-12 col-lg-8 mb-md-0 mb-4">
+								<h2 class="footer-heading"><a href="#" class="logo">Fit<span>Track</span></a></h2>
+								<p>A small river named Duden flows by their place and supplies it with the necessary regelialia.</p>
+								<a href="#">read more <span class="ion-ios-arrow-round-forward"></span></a>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-8 col-lg-7">
+						<div class="row">
+							<div class="col-md-3 mb-md-0 mb-4 border-left">
+								<h2 class="footer-heading">Services</h2>
+								<ul class="list-unstyled">
+		              <li><a href="#" class="py-1 d-block">Balance Body</a></li>
+		              <li><a href="#" class="py-1 d-block">Physical Activity</a></li>
+		              <li><a href="#" class="py-1 d-block">Fitness Program</a></li>
+		              <li><a href="#" class="py-1 d-block">Healthy Food</a></li>
+		            </ul>
+							</div>
+							<div class="col-md-3 mb-md-0 mb-4 border-left">
+								<h2 class="footer-heading">About</h2>
+								<ul class="list-unstyled">
+		              <li><a href="#" class="py-1 d-block">Staff</a></li>
+		              <li><a href="#" class="py-1 d-block">Team</a></li>
+		              <li><a href="#" class="py-1 d-block">Careers</a></li>
+		              <li><a href="#" class="py-1 d-block">Blog</a></li>
+		            </ul>
+							</div>
+							<div class="col-md-3 mb-md-0 mb-4 border-left">
+								<h2 class="footer-heading">Resources</h2>
+								<ul class="list-unstyled">
+		              <li><a href="#" class="py-1 d-block">Security</a></li>
+		              <li><a href="#" class="py-1 d-block">Global</a></li>
+		              <li><a href="#" class="py-1 d-block">Charts</a></li>
+		              <li><a href="#" class="py-1 d-block">Privacy</a></li>
+		            </ul>
+							</div>
+							<div class="col-md-3 mb-md-0 mb-4 border-left">
+								<h2 class="footer-heading">Social</h2>
+								<ul class="list-unstyled">
+		              <li><a href="#" class="py-1 d-block">Facebook</a></li>
+		              <li><a href="#" class="py-1 d-block">Twitter</a></li>
+		              <li><a href="#" class="py-1 d-block">Instagram</a></li>
+		              <li><a href="#" class="py-1 d-block">Google</a></li>
+		            </ul>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="row mt-5">
+          <div class="col-md-6 col-lg-8">
+
+          
+          <div class="col-md-6 col-lg-4 text-md-right">
+          	<p class="mb-0 list-unstyled">
+          		<a class="mr-md-3" href="#">Terms</a>
+          		<a class="mr-md-3" href="#">Privacy</a>
+          		<a class="mr-md-3" href="#">Compliances</a>
+          	</p>
+          </div>
+        </div>
+			</div>
+		</footer>
+    
+  
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/bootstrap-datepicker.js"></script>
+  <script src="js/jquery.timepicker.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
+  <script src="js/google-map.js"></script>
+  <script src="js/main.js"></script>
+
+ 
+    
+  </body>
+</html>
